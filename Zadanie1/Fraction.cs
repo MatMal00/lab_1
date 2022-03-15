@@ -54,12 +54,22 @@ namespace FirstApp
 
             return new Fraction(a.gauge * b.denominator, a.denominator * b.gauge);
         }
-
+        /// <summary>
+        /// returns the numeric representation of a fraction
+        /// </summary>
+        /// <param name="precision">with what precision should the value return</param>
+        /// <exception cref="ArgumentException">when value less than zero</exception>
         public void NumbericRepresentation(int precision = 1)
         {
+            if(precision < 0) throw new ArgumentException("wrong argument");
+
             Console.WriteLine(Math.Round(((float)gauge / denominator), precision));
         }
-
+        /// <summary>
+        /// returns the fraction rounded up or down
+        /// </summary>
+        /// <param name="value">0 - Returns the smallest integral value, 1 - returns the largest integer</param>
+        /// <exception cref="ArgumentException">when value is different from 0 or 1</exception>
         public void RoundFraction(int value = 0)
         {
             if (value == 0)
@@ -69,7 +79,12 @@ namespace FirstApp
             else
                 throw new ArgumentException("wrong argument");
         }
-
+        /// <summary>
+        /// compares two fractions with each other
+        /// </summary>
+        /// <param name="otherFraction"></param>
+        /// <returns>-1 || 0 || 1</returns>
+        /// <exception cref="ArgumentException">when argument is not a fraction</exception>
         public int CompareTo(Fraction otherFraction)
         {
             if (otherFraction == null) return 1;
@@ -79,7 +94,11 @@ namespace FirstApp
             else
                 throw new ArgumentException("Object is not a Fraction");
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public bool Equals(Fraction other)
         {
             if (other == null)
