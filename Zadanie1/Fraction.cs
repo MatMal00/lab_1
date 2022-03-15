@@ -2,7 +2,7 @@
 
 namespace FirstApp
 {
-    class Fraction : IComparable<Fraction>, IEquatable<Fraction>
+    public class Fraction : IComparable<Fraction>, IEquatable<Fraction>
     {
         private int gauge;
         private int denominator;
@@ -55,27 +55,29 @@ namespace FirstApp
             return new Fraction(a.gauge * b.denominator, a.denominator * b.gauge);
         }
         /// <summary>
-        /// returns the numeric representation of a fraction
+        /// numeric representation of a fraction
         /// </summary>
+        /// <returns>returns the numeric representation of a fraction</returns>
         /// <param name="precision">with what precision should the value return</param>
         /// <exception cref="ArgumentException">when value less than zero</exception>
-        public void NumbericRepresentation(int precision = 1)
+        public double NumbericRepresentation(int precision = 1)
         {
             if(precision < 0) throw new ArgumentException("wrong argument");
 
-            Console.WriteLine(Math.Round(((float)gauge / denominator), precision));
+            return Math.Round(((double)gauge / denominator), precision);
         }
         /// <summary>
-        /// returns the fraction rounded up or down
+        /// fraction rounded up or down
         /// </summary>
+        /// <returns>returns the fraction rounded up or down</returns>
         /// <param name="value">0 - Returns the smallest integral value, 1 - returns the largest integer</param>
         /// <exception cref="ArgumentException">when value is different from 0 or 1</exception>
-        public void RoundFraction(int value = 0)
+        public double RoundFraction(int value = 0)
         {
             if (value == 0)
-                Console.WriteLine(Math.Ceiling(((float)gauge / denominator)));
+                return Math.Ceiling(((double)gauge / denominator));
             else if (value == 1)
-                Console.WriteLine(Math.Floor(((float)gauge / denominator)));
+                return Math.Floor(((double)gauge / denominator));
             else
                 throw new ArgumentException("wrong argument");
         }

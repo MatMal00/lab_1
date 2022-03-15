@@ -9,7 +9,7 @@ namespace FirstApp
         {
             var fracion1 = new Fraction(3, 7);
             var fracion2 = new Fraction(3, 7);
-            Console.WriteLine(fracion1.Equals(fracion2));
+            Console.WriteLine(fracion1.NumbericRepresentation(2));
         }
     }
 }
