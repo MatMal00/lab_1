@@ -1,7 +1,7 @@
 using FirstApp;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestsFraction.UnitTests
+namespace TestFraction.UnitTests
 {
     [TestClass]
     public class FractionTests
