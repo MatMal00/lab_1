@@ -95,10 +95,10 @@ namespace FirstApp
                 throw new ArgumentException("Object is not a Fraction");
         }
         /// <summary>
-        /// 
+        /// checks if fractions have the same values
         /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
+        /// <param name="other">other fraction</param>
+        /// <returns>return true when are the same, false when not</returns>
         public bool Equals(Fraction other)
         {
             if (other == null)
