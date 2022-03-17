@@ -66,11 +66,12 @@ namespace FirstApp
 
             return Math.Round(((double)gauge / denominator), precision);
         }
+
         /// <summary>
         /// fraction rounded up or down
         /// </summary>
         /// <returns>returns the fraction rounded up or down</returns>
-        /// <param name="value">0 - Returns the smallest integral value, 1 - returns the largest integer</param>
+        /// <param name="value">1 - Returns the smallest integral value, 0 - returns the largest integer</param>
         /// <exception cref="ArgumentException">when value is different from 0 or 1</exception>
         public double RoundFraction(int value = 0)
         {

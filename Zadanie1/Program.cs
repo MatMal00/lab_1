@@ -7,9 +7,9 @@ namespace FirstApp
     {
         static void Main(string[] args)
         {
-            var fracion1 = new Fraction(3, 7);
-            var fracion2 = new Fraction(3, 7);
-            Console.WriteLine(fracion1.NumbericRepresentation(2));
+            var fracion1 = new Fraction(1, 2);
+            var fracion2 = new Fraction(1, 3);
+            Console.WriteLine(fracion1.CompareTo(fracion2));
         }
     }
 }
